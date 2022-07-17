@@ -5,10 +5,15 @@ import Footer from '../components/Footer'
 import Header from '../components/Header'
 import Layout from '../components/Layout'
 import LayoutAdmin from '../components/Layout/admin'
+import { useAuth } from '../hooks/auth'
 import styles from '../styles/Home.module.css'
 
 const Home: NextPage = () => {
+  const {data,error,register} = useAuth();
+  if(error) return <div>Fail to load</div>
+  if(!data) return <div>Loading...</div>
   return (
+    
     <div className={styles.container}>
       <Head>
         <title>Next JS</title>
@@ -20,6 +25,8 @@ const Home: NextPage = () => {
       </main>
 
       <Footer/>
+      {data.map((user:any,index:any) => <div key={index}>{user.email}</div>)}
+      <button onClick={() => register({email: "admin@gmail.com", password: "123456"})}>Đăng Ký</button>
     </div>
   )
 }
