@@ -1,0 +1,11 @@
+
+.menu{
+    @apply bg-orange-500 p-3 flex space-x-5;
+   
+}
+.item{
+    @apply block hover:text-white;
+}
+.active {
+    @apply text-white
+}

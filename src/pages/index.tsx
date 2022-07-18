@@ -31,7 +31,6 @@ const Home: NextPage = () => {
             <button onClick={() => create({ id: 10, name: "Product 10" })}>Create</button>
       </main>
 
-      <Footer/>
       {/* {data.map((user:any,index:any) => <div key={index}>{user.email}</div>)}
       <button onClick={() => register({email: "admin@gmail.com", password: "123456"})}>Đăng Ký</button> */}
     </div>

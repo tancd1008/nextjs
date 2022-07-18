@@ -1,0 +1,3 @@
+.footer {
+    @apply bg-orange-500 p-3 flex space-x-5;
+}
