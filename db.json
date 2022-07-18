@@ -23,11 +23,6 @@
       "email": "user2@gmail.com",
       "password": "$2a$10$/Xy/2Ly0Sd8oSToe/bjzh.6L95AfzY0z7BQMFxCE4FznG/3vTy9ZO",
       "id": 2
-    },
-    {
-      "email": "admin@gmail.com",
-      "password": "$2a$10$HN15nTOoK9C4.8vsU38rruYKvbC11XmzFWXGGszeELIsiOl18HRIO",
-      "id": 3
     }
   ]
 }

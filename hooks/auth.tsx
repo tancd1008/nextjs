@@ -1,5 +1,5 @@
 import useSWR, { useSWRConfig } from "swr"
-import { list, signup } from "../api/auth";
+import { list, signin, signup } from "../api/auth";
 
 export const useAuth = () => {
     // get list user
@@ -21,12 +21,19 @@ export const useAuth = () => {
         })
     }
     // login
-    
+    const login = (user: any) => {
+        const account = user
+        mutate("/users", async() => {
+            const { data: user } = await signin(account);
+            return [...data, user]
+        })
+    }
     // logout
 
     return {
         data,
         error,
-        register
+        register,
+        login
     }
 }
